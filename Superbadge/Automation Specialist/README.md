@@ -10,9 +10,14 @@
   **Setup -> Object Manager -> Account -> Fields & Relationships**
 1. Create a validation rule:
   **Setup -> Object Manager -> Account -> Validation Rules**
+# Create Sales Process and Validate Opportunities
+1. Create sales process: 
+  **Setup -> Sales Processes**
 ## Validation Rule (Country):
  ` NOT(REGEX( Country , "^(United States|USA|US)$|^$"))`
 ## Validation Rule (State):
  ` NOT(REGEX( State , "^(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])$"))`
 ## Validation Rule (Account with Type cannot Change Name)
  ` AND ( ISCHANGED( Name ), OR(ISPICKVAL(Type, "Customer - Direct"), ISPICKVAL(Type, "Customer - Channel")) )`
+## Validation Rule (Opportunity with Amount more than 100K)
+ ` AND( Amount > 100000, Approved__c = false)`
