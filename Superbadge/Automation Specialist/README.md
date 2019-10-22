@@ -17,6 +17,13 @@
   **Setup -> Email Alerts**
 1. Assign "Nushi Davoud" to be your manager:
   **Account Icon(Top Right) -> Settings -> Approver Settings**
+1. Create Process: 
+  **Setup -> Process Builder**
+# Create Flow for Opportunities
+1. Create flow:
+  **Setup -> Flow Builder**
+1. Put component in lightning page:
+  **Setup -> Lightning App Builder**
 ## Validation Rule (Country):
  ` NOT(REGEX( Country , "^(United States|USA|US)$|^$"))`
 ## Validation Rule (State):
