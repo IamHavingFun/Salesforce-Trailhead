@@ -21,7 +21,5 @@
  ` NOT(REGEX( Country , "^(United States|USA|US)$|^$"))`
 ## Validation Rule (State):
  ` NOT(REGEX( State , "^(A[KLRZ]|C[AOT]|D[CE]|FL|GA|HI|I[ADLN]|K[SY]|LA|M[ADEINOST]|N[CDEHJMVY]|O[HKR]|P[AR]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])$"))`
-## Validation Rule (Account with Type cannot Change Name)
- ` AND ( ISCHANGED( Name ), OR(ISPICKVAL(Type, "Customer - Direct"), ISPICKVAL(Type, "Customer - Channel")) )`
 ## Validation Rule (Opportunity with Amount more than 100K)
  ` AND( Amount > 100000, Approved__c = false)`
