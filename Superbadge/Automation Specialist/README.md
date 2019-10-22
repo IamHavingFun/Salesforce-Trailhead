@@ -13,6 +13,10 @@
 # Create Sales Process and Validate Opportunities
 1. Create sales process: 
   **Setup -> Sales Processes**
+1. Create email alerts:
+  **Setup -> Email Alerts**
+1. Assign "Nushi Davoud" to be your manager:
+  **Account Icon(Top Right) -> Settings -> Approver Settings**
 ## Validation Rule (Country):
  ` NOT(REGEX( Country , "^(United States|USA|US)$|^$"))`
 ## Validation Rule (State):
