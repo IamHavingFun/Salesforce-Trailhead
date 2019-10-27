@@ -6,6 +6,7 @@ private class ProjectCalloutServiceTest {
         	Name='Test Account'    
         );
         insert account;
+        
         Opportunity opportunity = new Opportunity( 
             Name='TestOpportunity', 
             AccountId=account.Id, 
@@ -14,13 +15,18 @@ private class ProjectCalloutServiceTest {
             Amount=999
         );
         insert opportunity;
-        ServiceTokens__c setting = new ServiceTokens__c();
-        setting.Name = 'ProjectServiceToken';
-        setting.Token__c = 'TestToken';
+        
+        //Create Custom Settings
+        ServiceTokens__c setting = new ServiceTokens__c(
+        	Name='ProjectServiceToken',
+            Token__c = 'TestToken'
+        );
+        insert setting;
+        
         return opportunity.Id;
     }
     
-    @isTest static void testCalloutSuccess() {
+    @isTest static void testProjectCallout() {
       	Id opportunityId = setup();
         List<Id> opportunityIds = new List<Id>();
         opportunityIds.add(opportunityId);
@@ -34,7 +40,7 @@ private class ProjectCalloutServiceTest {
         System.assertEquals(currentStage, 'Submitted Project');
     }
     
-    @isTest static void testCalloutFailure() {
+    @isTest static void testProjectCalloutFailure() {
       	Id opportunityId = setup();
         List<Id> opportunityIds = new List<Id>();
         opportunityIds.add(opportunityId);
@@ -44,7 +50,10 @@ private class ProjectCalloutServiceTest {
 		ProjectCalloutService.PostOpportunityToPMS(opportunityIds);
         Test.stopTest();
         
-        String currentStage = [SELECT StageName FROM Opportunity WHERE Id = :opportunityId][0].StageName;
+        String currentStage = [
+            SELECT StageName 
+            FROM Opportunity 
+            WHERE Id = :opportunityId][0].StageName;
         System.assertEquals(currentStage, 'Resubmit Project');        
     }
 }
