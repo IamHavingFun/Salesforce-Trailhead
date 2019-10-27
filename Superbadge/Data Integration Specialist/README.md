@@ -10,3 +10,5 @@ Set savepoint/rollback database|https://developer.salesforce.com/docs/atlas.en-u
 Specify external ID with upsert statement to reduce DML calls|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_examples_upsert.htm
 Use `Trigger.newMap and Trigger.oldMap` instead of `Trigger.new` and `Trigger.old` to compare items against Id|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_context_variables.htm
 Test Web Service Callouts with WebServiceMock|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_callouts_wsdl2apex_testing.htm
+Prevent trigger from being called from update with `System.isFuture()`|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_system.htm
+Use `before update` trigger instead of `after update` since objects in `after update` trigger are read-only| https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_System_Trigger.htm
