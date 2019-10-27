@@ -8,3 +8,5 @@ Enable Callouts in Batch Apex|https://developer.salesforce.com/docs/atlas.en-us.
 Custom Settings not Accessible in test (NullPointerException de-reference)|Use `@isTest(SeeAllData=true)` annotation or create a new Custom Settings in test method then insert
 Set savepoint/rollback database|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_transaction_control.htm
 Specify external ID with upsert statement to reduce DML calls|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_dml_examples_upsert.htm
+Use `Trigger.newMap and Trigger.oldMap` instead of `Trigger.new` and `Trigger.old` to compare items against Id|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_triggers_context_variables.htm
+Test Web Service Callouts with WebServiceMock|https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_callouts_wsdl2apex_testing.htm
