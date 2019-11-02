@@ -1,16 +1,27 @@
-# Automate Leads
+# Concepts Tested
+Concepts|Related Files/Url
+---|---|
+Automate lead ownership using assignment rules
+Enforce data integrity with formula fields and validation rules
+Create a custom object in a master-detail relationship to a standard object
+Define an opportunity sales process using stages, record types, and validation rules
+Automate business processes to send emails, create related records, and submit opportunities for approval
+Create a flow to display dynamic information on a Lightning record page
+Create a process to evaluate and update records
+
+## Automate Leads
 1. Create a validation rule:
   **Setup -> Object Manager -> Lead -> Validation Rules**
 1. Create two queues for leads:
   **Setup -> Queue**
 1. Create lead assignment rules:
   **Setup -> Lead Assignment Rule**
-# Create Robot Setup Object
+## Create Robot Setup Object
 1. Add account formula fields: 
   **Setup -> Object Manager -> Account -> Fields & Relationships**
 1. Create a validation rule:
   **Setup -> Object Manager -> Account -> Validation Rules**
-# Create Sales Process and Validate Opportunities
+## Create Sales Process and Validate Opportunities
 1. Create sales process: 
   **Setup -> Sales Processes**
 1. Create email alerts:
@@ -19,7 +30,7 @@
   **Account Icon(Top Right) -> Settings -> Approver Settings**
 1. Create Process: 
   **Setup -> Process Builder**
-# Create Flow for Opportunities
+## Create Flow for Opportunities
 1. Create flow:
   **Setup -> Flow Builder**
 1. Put component in lightning page:
