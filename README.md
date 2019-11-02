@@ -2,3 +2,4 @@
 **For non-commercial and/or educational purpose only.**
 # Contents
 * [Overview](/OVERVIEW.md)
+* [Notes](/NOTES.md)
