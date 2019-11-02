@@ -18,4 +18,5 @@
 ## Learn
 Topic|Resources
 ---|---|
-Web Components|https://www.webcomponents.org/introduction#what-are-web-components-
+Web Components|[Webcomponents.org](https://www.webcomponents.org/introduction#what-are-web-components-)
+Apex Metadata|[Apex Metadata Module](https://trailhead.salesforce.com/content/learn/modules/apex_metadata_api)
