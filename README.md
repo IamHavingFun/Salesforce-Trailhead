@@ -1,5 +1,6 @@
 # Notes & Code for Salesforce Trailhead Module, Project, and Superbadges
 **For non-commercial and/or educational purpose only.**
 # Contents
-* [Overview](/OVERVIEW.md)
-* [Notes](/NOTES.md)
+* [Overview](./OVERVIEW.md)
+* [Task and Issue Notes](./TASK_ISSUE_NOTES.md)
+* [Design Notes](./DESIGN_NOTES.md)
