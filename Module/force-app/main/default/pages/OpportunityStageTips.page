@@ -1,0 +1,38 @@
+<apex:page docType="html-5.0" standardController="Opportunity">
+    <style>
+        h2, p {
+            text-align: center;
+        }
+        h2 {
+            font-size: 2em;
+        }
+        .tips {
+            display: flex;
+            align-items: center;
+            content-justify: center;
+            flex-direction: column;
+            height: 100%;
+        }
+    </style>
+    <apex:slds />
+    <div class="slds-scope tips">
+        <h2>
+            Stage: {!Opportunity.StageName}
+        </h2>
+        <h3>
+            <!-- Trailhead will not check CASE for some reason
+            {!CASE(Opportunity.StageName,
+            "Prospecting", "tip for prospecting",
+            "Needs Analysis", "tip for analysis",
+            "Proposal/Price Quote", "tip for proposal/price quote",
+            "Negotiation/Review", "tip for negotiation/review",
+            "default tip"
+            )}
+            -->
+            <apex:outputText rendered="{!Opportunity.StageName}=='Prospecting'">Tip for Prospecting Stage</apex:outputText>
+            <apex:outputText rendered="{!Opportunity.StageName}=='Needs Analysis'">Tip for Needs Analysis Stage</apex:outputText>
+            <apex:outputText rendered="{!Opportunity.StageName}=='Proposal/Price Quote'">Tip for Proposal/Price Quote Stage</apex:outputText>
+            <apex:outputText rendered="{!Opportunity.StageName}=='Negotiation/Review'">Tip for Negotiation/Review Stage</apex:outputText>            
+        </h3>       
+    </div>
+</apex:page>

@@ -1,2 +1,11 @@
-<apex:page standardController="Contact" recordSetVar="Contacts">
+<apex:page standardController="Contact">
+    <apex:slds />
+    <div class="slds-scope">
+        <dl class="slds-dl_inline">
+            <dt class="slds-dl_inline__label">Assistant</dt>
+            <dd class="slds-dl_inline__detail">{!Contact.AssistantName}</dd>
+            <dt class="slds-dl_inline__label">Phone</dt>
+            <dd class="slds-dl_inline__detail"><a href="tel:{!Contact.AssistantPhone}">{!Contact.AssistantPhone}</a></dd>    
+        </dl>
+	</div>
 </apex:page>
