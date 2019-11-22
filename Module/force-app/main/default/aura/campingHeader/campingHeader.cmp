@@ -1,4 +1,5 @@
-<aura:component>
+<aura:component controller="CampingListController">
+    <aura:registerEvent name="addItem" type="c:addItemEvent"/>
     <lightning:layout class="slds-page-header slds-page-header--object-home">
         <lightning:layoutItem>
             <lightning:icon iconName="action:goal" alternativeText="Camping List"/>

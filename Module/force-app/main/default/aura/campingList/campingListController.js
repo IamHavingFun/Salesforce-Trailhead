@@ -1,32 +1,40 @@
 ({
     doInit: function(component, event, helper) {
-        let action = component.get('c.getItems');
+        console.log('update list');
+        const action = component.get('c.getItems');
         
         action.setCallback(this, function (response) {
-            let state = response.getState();
+            const state = response.getState();
             if(state === 'SUCCESS') {
                 component.set('v.items', response.getReturnValue());
             } else {
                 console.log(`Failed. State: ${state}`); 
             }
         });
-        
-        $A.enqueueAction(action);
-    },
-    clickCreateItem : function(component, event, helper) {
-        
-        const validInput = component.find('campingitemform').reduce(function(valid, inputComponent) {
-            inputComponent.showHelpMessageIfInvalid();
-            return valid && inputComponent.get('v.validity').valid;
-        }, true);
-        
-        if(validInput) {                   
-            let item = component.get('v.newItem');
 
- 			helper.createItem(component, item);
-            
-            // Reset newItem value
-            component.set('v.newItem', {'sobjectType': 'Camping_Item__c','Quantity__c': 0,'Price__c': 0});
-        }
+        $A.enqueueAction(action);
+    }, 
+    handleAddItem: function(component, event, helper) {
+        console.log('handle add item');
+        // Save record to database and add to items value provider
+       	const newItem = event.getParam('item');
+        
+        const action = component.get('c.saveItem');
+        action.setParams({
+            'item': newItem
+        }); 
+        action.setCallback(this, function (response)  {
+            let state = response.getState();
+            if(state === 'SUCCESS') {
+                console.log('item saved');
+                let items = component.get('v.items');
+                items.push(response.getReturnValue());
+                component.set('v.items', items);                              
+            } else {
+                console.log(`Failed. State: ${state}`); 
+            }
+        });
+
+        $A.enqueueAction(action);
     }
 })
