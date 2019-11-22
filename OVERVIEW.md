@@ -5,7 +5,7 @@
 ## To Do (from [Trailhead Module Recommendation](https://trailhead.salesforce.com/content/learn/modules/career-development-planning/create-a-plan-and-skill-up)) 
 ### Trail
 - [x] Developer Beginner
-- [ ] Developer Intermediate
+- [x] Developer Intermediate
 - [ ] Develop for Lightning Experience 
 ### Superbadge
 - [x] Apex Specialist Superbadge
