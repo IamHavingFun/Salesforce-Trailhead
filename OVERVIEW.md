@@ -10,6 +10,7 @@
 ### Superbadge
 - [x] Apex Specialist Superbadge
 - [x] Data Integration Specialist Superbadge
+- [ ] Aura Components Specialist Superbadge
 - [ ] Lightning Experience Specialist Superbadge
 ### Project
 - [ ] Build a Conference Management App 
